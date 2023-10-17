@@ -64,7 +64,7 @@ class LinkedList {
     let slow = this.head;
     let fast = this.head;
 
-    // Iterate through the list
+    // Iterate through the list -> 1st condition checks for empty list, 2nd checks is list ends without loop i.e. next will be null for some node and this will be termination condition
     while (fast !== null && fast.next !== null) {
       // move slow pointer one step
       slow = slow.next;
