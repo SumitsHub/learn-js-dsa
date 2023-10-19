@@ -41,6 +41,11 @@ class Queue {
     temp.next = null;
 
     this.length--;
+    // check if queue becomes empty -> set last to null
+    if (this.length === 0) {
+      this.last = null;
+    }
+
     return temp;
   }
 }
