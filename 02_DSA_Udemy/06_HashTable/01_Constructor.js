@@ -5,7 +5,7 @@ class HashTable {
     this.dataMap = new Array(size);
   }
 
-  // internal function to generate hash
+  // internal function to generate hash -> everytime it will generate same hash for same key
   _hash(key) {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
