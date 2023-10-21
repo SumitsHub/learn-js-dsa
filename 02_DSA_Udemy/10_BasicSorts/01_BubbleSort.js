@@ -5,7 +5,8 @@
  *
  * */
 function bubbleSort(array) {
-  // loop
+  // loop to iterate till before the last sorted element
+  // after each iteration, one item will get sorted
   for (let i = array.length - 1; i > 0; i--) {
     for (let j = 0; j < i; j++) {
       if (array[j] > array[j + 1]) {
@@ -14,9 +15,15 @@ function bubbleSort(array) {
         array[j + 1] = temp;
       }
     }
-    console.log(array);
   }
   return array;
 }
 
 bubbleSort([4, 2, 6, 5, 1, 3]);
+
+// Array after each iteration
+// [ 2, 4, 5, 1, 3, 6 ]
+// [ 2, 4, 1, 3, 5, 6 ]
+// [ 2, 1, 3, 4, 5, 6 ]
+// [ 1, 2, 3, 4, 5, 6 ]
+// [ 1, 2, 3, 4, 5, 6 ]
