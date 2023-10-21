@@ -37,24 +37,25 @@ class BST {
       }
     }
   }
-
   /**
-   * Depth First Search (DFS) - PreOrder
-   * Pre Order: Root -> Left -> Right
+   * Depth First Search (DFS) - PostOrder
+   * Post Order: Left -> Right -> Root
    *
-   * Root first
+   * Root last
    */
-  DFSPreOrder() {
-    // array to store node values
+  DFSPostOrder() {
+    // array to store traversed node values
     let results = [];
-    // function to traverse tree
+    // function to traverse nodes
     function traverse(currentNode) {
-      // push current node value then traverse left then traverse right
-      results.push(currentNode.value);
+      // traverse left and right
       if (currentNode.left) traverse(currentNode.left);
       if (currentNode.right) traverse(currentNode.right);
+
+      // push value of node if left and right is null
+      results.push(currentNode.value);
     }
-    // start traversing from root node
+
     traverse(this.root);
     return results;
   }
@@ -69,5 +70,5 @@ bst.insert(27);
 bst.insert(52);
 bst.insert(82);
 
-bst.DFSPreOrder();
-// [47, 21, 18, 27, 76, 52, 82]
+bst.DFSPostOrder();
+// [18, 27, 21, 52, 82, 76, 47]
