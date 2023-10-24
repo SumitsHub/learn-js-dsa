@@ -37,7 +37,7 @@ class LinkedList {
     return temp;
   }
 
-  /** set value of the node specified at index */
+  /** set/update value of the node specified at index */
   set(index, value) {
     // retrive node at specified index
     let temp = this.getListFromIndex(index);

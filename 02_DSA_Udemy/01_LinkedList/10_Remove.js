@@ -128,7 +128,7 @@ class LinkedList {
 
     // set previous node's index to current node's index
     prev.next = temp.next;
-    temp.next = null; // setting next to null since returning removed index
+    temp.next = null; // setting next to null since returning removed node
     this.length--;
 
     return temp;

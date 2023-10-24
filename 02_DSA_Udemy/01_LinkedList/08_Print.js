@@ -31,10 +31,13 @@ class LinkedList {
     if (!this.head) return '';
     let temp = this.head;
     let output = '';
+    // iterate through the list
     while (temp.next) {
+      // add value of each node to the output string
       output += temp.value + ' > ';
       temp = temp.next;
     }
+    // add value of the last node (tail node of the list)
     output += temp.value;
     return output;
   }

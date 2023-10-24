@@ -33,7 +33,7 @@ class LinkedList {
       return undefined;
     } else {
       // pre - for storing previous value, temp - for storing next value
-      let pre = this.head,
+      let pre = null,
         temp = this.head;
       // iterating through list using while loop
       while (temp.next) {

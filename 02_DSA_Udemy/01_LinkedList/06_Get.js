@@ -28,12 +28,17 @@ class LinkedList {
 
   /** get node at particular index */
   get(index) {
+    // check for valid index
     if (index < 0 || index > this.length - 1) return undefined;
+    // temp pointer to iterate through the list
     let temp = this.head;
     for (let i = 0; i < index; i++) {
       temp = temp.next;
     }
-    temp.next = null;
+    // DANGER - setting next of temp to null will also affect the original list node it's referncing
+    // temp.next = null;
+    // to avoid change in original list and return node with value without having reference to rest of the list, do following way
+    temp = new Node(temp.value);
     return temp;
   }
 }
