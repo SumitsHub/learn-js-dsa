@@ -29,6 +29,6 @@ function same(arr1, arr2) {
   return true;
 }
 
-same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]); // true
+same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]); // false
 same([1, 2, 3, 4], [16, 4, 9, 1]); // true
 same([1, 2, 3, 2], [1, 4, 9]); // false
