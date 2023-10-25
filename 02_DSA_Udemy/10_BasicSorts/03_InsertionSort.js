@@ -1,16 +1,20 @@
 function insertionSort(arr) {
-  let temp;
   let i, j;
 
   // start from 2nd element
   for (i = 1; i < arr.length; i++) {
-    temp = arr[i];
-    // compare with previous elements
-    for (j = i - 1; j > -1 && arr[j] > temp; j--) {
+    const currentElement = arr[i];
+    j = i - 1;
+
+    // Move elements of arr[0..i-1] that are greater than currentElement
+    // to one position ahead of their current position
+    while (j >= 0 && arr[j] > currentElement) {
       arr[j + 1] = arr[j];
+      j--;
     }
-    // inserting element at correct position
-    arr[j + 1] = temp;
+
+    // Place the currentElement at its correct position
+    arr[j + 1] = currentElement;
   }
   return arr;
 }
