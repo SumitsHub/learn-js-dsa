@@ -41,7 +41,7 @@ class DoublyLinkedList {
       this.tail = null;
     } else {
       // pointing tail of the list to 2nd last node and set next to null
-      this.tail = this.tail.prev;
+      this.tail = temp.prev;
       this.tail.next = null;
       // remove prev of the tail
       temp.prev = null;
