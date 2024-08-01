@@ -12,6 +12,7 @@ let arr = [3, 6, 8, 12, 14, 17, 25, 29, 31, 36, 42, 47, 53, 55, 62];
  * @returns - index of num in arr
  */
 function binarySearch(arr, num) {
+  // initial low(min) and high(max) index
   let l = 0;
   let h = arr.length - 1;
   let m;
@@ -20,12 +21,10 @@ function binarySearch(arr, num) {
     m = Math.floor((l + h) / 2);
     if (arr[m] === num) {
       return m;
+    } else if (num > arr[m]) {
+      l = m + 1;
     } else {
-      if (num > arr[m]) {
-        l = m + 1;
-      } else {
-        h = m - 1;
-      }
+      h = m - 1;
     }
   }
   return -1;
@@ -59,10 +58,8 @@ function RBS(arr, num, low = 0, high = arr.length - 1) {
   let mid = Math.floor((low + high) / 2);
 
   if (arr[mid] === num) return mid;
-  else {
-    if (arr[mid] > num) return RBS(arr, num, low, mid - 1);
-    else return RBS(arr, num, mid + 1, high);
-  }
+  else if (arr[mid] > num) return RBS(arr, num, low, mid - 1);
+  else return RBS(arr, num, mid + 1, high);
 }
 
 console.log(RBS(arr, 17)); // 5
