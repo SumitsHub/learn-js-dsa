@@ -31,7 +31,7 @@ class Queue {
     if (!this.first) {
       return undefined;
     }
-    // store first pointer referance
+    // store first pointer reference
     let temp = this.first;
 
     // move first to next node
@@ -48,6 +48,27 @@ class Queue {
 
     return temp;
   }
+
+  printQueue() {
+    let temp = this.first;
+    let output = "";
+    while (temp.next) {
+      output += temp.value + " > ";
+      temp = temp.next;
+    }
+    output += temp.value;
+    console.log(output);
+  }
 }
 
 let q = new Queue(1);
+q.enqueue(2);
+q.enqueue(3);
+q.enqueue(4);
+q.enqueue(5);
+
+q.printQueue();
+
+q.dequeue();
+q.dequeue();
+q.printQueue();
