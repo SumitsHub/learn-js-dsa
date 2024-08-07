@@ -35,7 +35,7 @@ class LinkedList {
     for (let i = 0; i < index; i++) {
       temp = temp.next;
     }
-    // DANGER - setting next of temp to null will also affect the original list node it's referncing
+    // DANGER - setting next of temp to null will also affect the original list node it's referencing
     // temp.next = null;
     // to avoid change in original list and return node with value without having reference to rest of the list, do following way
     temp = new Node(temp.value);

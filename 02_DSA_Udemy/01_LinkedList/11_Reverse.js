@@ -42,7 +42,7 @@ class LinkedList {
     this.head = this.tail;
     this.tail = temp;
 
-    // variables to stpre previous node and next node
+    // variables to store previous node and next node
     let prev = null;
     let next = temp.next;
 

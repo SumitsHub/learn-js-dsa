@@ -39,7 +39,7 @@ class LinkedList {
 
   /** set/update value of the node specified at index */
   set(index, value) {
-    // retrive node at specified index
+    // retrieve node at specified index
     let temp = this.getListFromIndex(index);
     if (temp) {
       // change the value of that node
