@@ -8,14 +8,14 @@
   - recursion
 
 #### 02 DSA Udemy
-- Learning Source - Udemy course by Scott Barrett- JavaScript Data Structures & Algorithms + LEETCODE Exercises
+- Learning Source - Udemy course by "Scott Barrett" - JavaScript Data Structures & Algorithms + LEETCODE Exercises
 
 #### 03 problem solving patterns
 - Basic starting patterns to solve a problem
   - Frequency Counter Pattern
   - Multiple Pointers Pattern
   - Sliding Window Pattern
-- Learning Source - Udemy course by Colt Steele - JavaScript Algorithms and Data Structures Masterclass
+- Learning Source - Udemy course by "Colt Steele" - JavaScript Algorithms and Data Structures Masterclass
 
 #### 04 DSA Topics
-- Learning Source - Udemy course by Colt Steele - JavaScript Algorithms and Data Structures Masterclass
+- Learning Source - Udemy course by "Colt Steele" - JavaScript Algorithms and Data Structures Masterclass
