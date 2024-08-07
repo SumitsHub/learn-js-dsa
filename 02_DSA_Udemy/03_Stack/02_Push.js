@@ -17,9 +17,9 @@ class Stack {
   push(value) {
     // create node with given value
     let node = new Node(value);
-    // add referance of top of the stack to next of the new node
+    // add reference of top of the stack to next of the new node
     node.next = this.top;
-    // new node becames the top -> FIFO
+    // new node becomes the top -> FIFO
     this.top = node;
 
     this.length++;
