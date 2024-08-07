@@ -116,7 +116,7 @@ class DoublyLinkedList {
 
   /** remove element at the specified index */
   remove(index) {
-    // handeling edge cases -> start, end, invalid index
+    // handling edge cases -> start, end, invalid index
     if (index === 0) return this.shift();
     if (index === this.length - 1) return this.pop();
     if (index < 0 || index >= this.length) return false;
@@ -136,6 +136,18 @@ class DoublyLinkedList {
     this.length--;
     return current;
   }
+
+  printList(reverse = false) {
+    let temp = reverse ? this.tail : this.head;
+    let output = "";
+
+    while ((!reverse && temp.next) || (reverse && temp.prev)) {
+      output += temp.value + " > ";
+      temp = reverse ? temp.prev : temp.next;
+    }
+    output += temp.value;
+    console.log(output);
+  }
 }
 
 let dll = new DoublyLinkedList(0);
@@ -143,3 +155,9 @@ let dll = new DoublyLinkedList(0);
 dll.push(1);
 dll.push(2);
 dll.push(3);
+
+dll.insert(0, 10);
+dll.insert(1, 11);
+
+dll.printList();
+dll.printList(true);

@@ -77,7 +77,7 @@ class DoublyLinkedList {
     // check for invalid input index
     if (index < 0 || index >= this.length) return undefined;
 
-    // temp referance to the head for traversing the list
+    // temp reference to the head for traversing the list
     let temp = this.head;
 
     // for first half of the list -> traverse from start to next

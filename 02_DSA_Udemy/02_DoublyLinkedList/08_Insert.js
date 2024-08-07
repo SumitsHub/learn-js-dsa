@@ -98,7 +98,7 @@ class DoublyLinkedList {
 
   /** insert node at specified index */
   insert(index, value) {
-    // handeling edge cases -> start, end, invalid index
+    // handling edge cases -> start, end, invalid index
     if (index === 0) return this.unshift(value);
     if (index === this.length) return this.push(value);
     if (index < 0 || index > this.length) return false;

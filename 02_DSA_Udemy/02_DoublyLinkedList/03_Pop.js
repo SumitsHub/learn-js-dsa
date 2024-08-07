@@ -33,7 +33,7 @@ class DoublyLinkedList {
     // check for empty list
     if (!this.head) return undefined;
 
-    // temp pointer to hold referance of last node -> will be used to return the node
+    // temp pointer to hold reference of last node -> will be used to return the node
     let temp = this.tail;
     // checking for the list with single element
     if (!this.head.next) {
