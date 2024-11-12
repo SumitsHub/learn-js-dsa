@@ -61,7 +61,7 @@ class DoublyLinkedList {
     // check for empty list
     if (!this.head) return undefined;
 
-    // temporary referance to current head of the list
+    // temporary reference to current head of the list
     let temp = this.head;
     // check for list with single element
     if (!this.head.next) {

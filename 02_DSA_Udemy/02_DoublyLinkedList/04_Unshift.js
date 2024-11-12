@@ -43,7 +43,7 @@ class DoublyLinkedList {
     return temp;
   }
 
-  /** Insert node with input value at the begining of the list */
+  /** Insert node with input value at the beginning of the list */
   unshift(value) {
     // create new node with input value
     let node = new Node(value);
