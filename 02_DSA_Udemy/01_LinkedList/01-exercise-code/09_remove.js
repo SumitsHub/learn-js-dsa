@@ -138,10 +138,12 @@ class LinkedList {
     if (index < 0 || index >= this.length) return null;
     if (index === 0) return this.shift();
     if (index === this.length - 1) return this.pop();
+
     let prev = this.get(index - 1);
     let temp = prev.next;
     prev.next = temp.next;
     temp.next = null;
+
     this.length--;
 
     return temp;

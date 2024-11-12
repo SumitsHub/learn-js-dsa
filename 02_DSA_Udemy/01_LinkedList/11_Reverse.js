@@ -48,7 +48,7 @@ class LinkedList {
 
     // iterate through list
     for (let i = 0; i < this.length; i++) {
-      // store referance of the next node
+      // store reference of the next node
       next = temp.next;
       // assign current node next to previous node -> reversing pointer in backward direction
       temp.next = prev;

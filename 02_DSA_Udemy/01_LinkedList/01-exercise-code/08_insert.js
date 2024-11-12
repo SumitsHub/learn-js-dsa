@@ -122,10 +122,16 @@ class LinkedList {
   }
 
   insert(index, value) {
+    // check for invalid index and return false
     if (index < 0 || index > this.length) return false;
+    // inserting at beginning -> use unshift()
     if (index === 0) return this.unshift(value);
+    // inserting at the end -> use push()
     if (index === this.length) return this.push(value);
+
+    // create new node with input value
     let node = new Node(value);
+
     if (!this.head) {
       this.head = this.tail = node;
     } else {
